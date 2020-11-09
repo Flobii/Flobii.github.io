@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Ökologie</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+svg[id^="mermaidChart"] { line-height: 1em; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="ökologie" class="md-header-anchor"></a><span>Ökologie</span></h1><p>&nbsp;</p><h2><a name="table-of-contents" class="md-header-anchor"></a><span>Table of Contents</span></h2><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n0"><a class="md-toc-inner" href="#ökologie">Ökologie</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n3"><a class="md-toc-inner" href="#table-of-contents">Table of Contents</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n5"><a class="md-toc-inner" href="#zusammenfassung----begriffe">Zusammenfassung – Begriffe</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n30"><a class="md-toc-inner" href="#grundlagen">Grundlagen</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n38"><a class="md-toc-inner" href="#nahrungsnetz">Nahrungsnetz</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n43"><a class="md-toc-inner" href="#grundbegriffe">Grundbegriffe</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n60"><a class="md-toc-inner" href="#nahrungspyramide">Nahrungspyramide</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n68"><a class="md-toc-inner" href="#biotop">Biotop</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n75"><a class="md-toc-inner" href="#ökologische-nische">Ökologische Nische</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n100"><a class="md-toc-inner" href="#was-ist-eine-ökologische-nische">Was ist eine ökologische Nische?</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n114"><a class="md-toc-inner" href="#sukzession">Sukzession</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n119"><a class="md-toc-inner" href="#biotopschutz">Biotopschutz</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n122"><a class="md-toc-inner" href="#renaturierung">Renaturierung</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n125"><a class="md-toc-inner" href="#powerpoint-im-moodle">PowerPoint im Moodle</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n134"><a class="md-toc-inner" href="#stickstoffkreislauf">Stickstoffkreislauf</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n137"><a class="md-toc-inner" href="#stickstoffkreislauf----simpleclubhttpswwwyoutubecomwatchlistpliig2vndmtpctcqjkndeq74pusp47shiovnrkrdg4k-be">Stickstoffkreislauf – SimpleClub</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n142"><a class="md-toc-inner" href="#klimaregeln">Klimaregeln</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n159"><a class="md-toc-inner" href="#beispiele">Beispiele</a></span><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n182"><a class="md-toc-inner" href="#räuber-beute-beziehung">Räuber-Beute-Beziehung</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n194"><a class="md-toc-inner" href="#was-kann-man-aus-dieser-kurve-herauslesen">Was kann man aus dieser Kurve herauslesen?</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n202"><a class="md-toc-inner" href="#zusammenfassung">Zusammenfassung</a></span></p></div><h1><a name="zusammenfassung----begriffe" class="md-header-anchor"></a><span>Zusammenfassung – Begriffe</span></h1><p><b><span>1. Ökologische Potenz</span></b><br><span>Fähigkeit eines Organismus sich an die Schwankungen der Umweltfaktoren anzupassen.</span></p><p>&nbsp;</p><p><b><span>2. Präferendum</span></b><br><span>Der Bereich der Umweltfaktoren in dem ein Organismus am liebsten ist</span></p><p>&nbsp;</p><p><b><span>3. Toleranzkurve</span></b><br><span>Die Kurve, welche die Umweltfaktoren darstellt, in welchen ein Lebewesen wie gut leben kann.</span><br><span>Zeigt die Aktivität eines Lebewesens im genannten Toleranzbereich (Minimum, Optimum, Maximum).</span></p><p>&nbsp;</p><p><b><span>4. Toleranzbereich</span></b><br><span>Der Bereich der Umweltfaktoren in dem ein Organismus überleben/ existieren kann.</span></p><p>&nbsp;</p><p><b><span>5. Pessimum</span></b><br><span>Die schlachtest möglichen Umweltfaktoren, bei welchen ein Organismus existieren kann, Fortpflanzung nicht möglich.</span></p><p>&nbsp;</p><p><b><span>6. Euryök</span></b><br><span>Anpassungsfähig, schwankenden Umweltfaktoren stören das Überleben nicht.</span></p><p>&nbsp;</p><p><b><span>7. Stenök</span></b><br><span>Nicht anpassungsfähig, schwankende Umweltfaktoren stören das Leben. Sind sehr gut an ihre Umgebung angepasst.</span></p><p>&nbsp;</p><p><b><span>8. Zeigerorganismus</span></b><br><span>Haben nur einen kleinen Toleranzbereich und zeigen mit diesem an in welchem Zustand sich ihre Umwelt befindet.</span></p><p>&nbsp;</p><p><b><span>9. Abiotische Umweltfaktoren</span></b><br><span>Sind Faktoren der nicht lebenden Umwelt.</span></p><p>&nbsp;</p><p><b><span>10. Biotische Umweltfaktoren</span></b><br><span>Sind Faktoren der lebenden Umwelt</span></p><p>&nbsp;</p><p><b><span>11. Physiologische Potenz</span></b><br><span>Jener Bereich in dem ein Organismus überleben könnte, allerdings unter Ausschluss von Konkurrenten, die besser an den Standort angepasst sind.</span></p><p>&nbsp;</p><p><b><span>12. Wirkungsgesetz der Umweltfaktoren</span></b><br><span>Ausbreitung einer Art wird von dem Faktor bestimmt, der am wenigsten gut ausgeprägt ist, also dem limitierenden Faktor.</span><br><span>Man fasst all diese Begriffe mit einem zusammen: </span><a href=#biotop><span>Biotop</span></a></p><p>&nbsp;</p><h1><a name="grundlagen" class="md-header-anchor"></a><span>Grundlagen</span></h1><table style="border; 0px;">
+    <tbody><tr>
+    	<td width="60%">
+            <img src="http://www1.biologie.uni-hamburg.de/b-online/gd54/02.gif" alt="Kreislauf der Natur">
+        </td>
+        <td width="40%">
+        	<img src="https://images.genius.com/cfa296302ea60df3dcfbd5487f90acd9.605x355x1.gif" alt="Nahrungskette">
+        </td>
+    </tr>
+</tbody></table><p>&nbsp;</p><p><span>Der </span><strong><span>Kreislauf der Natur</span></strong><span> besteht aus vier Gruppen:</span></p><div style="float:left; padding-right: 1em;">
+    <ul>
+        <li>Produzenten</li>
+        <li>Konsumenten</li>
+        <li>Destruenten</li>
+        <li>abiotische Faktoren</li>
+    </ul>
+</div><p>&nbsp;</p><p><span>Die abiotischen Faktoren sind unter anderem die Sonne, </span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="5.463ex" height="2.344ex" viewBox="0 -806.1 2352 1009.2" role="img" focusable="false" style="vertical-align: -0.472ex; margin-right: -0.925ex;"><defs><path stroke-width="0" id="E670-MJMAIN-43" d="M56 342Q56 428 89 500T174 615T283 681T391 705Q394 705 400 705T408 704Q499 704 569 636L582 624L612 663Q639 700 643 704Q644 704 647 704T653 705H657Q660 705 666 699V419L660 413H626Q620 419 619 430Q610 512 571 572T476 651Q457 658 426 658Q322 658 252 588Q173 509 173 342Q173 221 211 151Q232 111 263 84T328 45T384 29T428 24Q517 24 571 93T626 244Q626 251 632 257H660L666 251V236Q661 133 590 56T403 -21Q262 -21 159 83T56 342Z"></path><path stroke-width="0" id="E670-MJMAIN-4F" d="M56 340Q56 423 86 494T164 610T270 680T388 705Q521 705 621 601T722 341Q722 260 693 191T617 75T510 4T388 -22T267 3T160 74T85 189T56 340ZM467 647Q426 665 388 665Q360 665 331 654T269 620T213 549T179 439Q174 411 174 354Q174 144 277 61Q327 20 385 20H389H391Q474 20 537 99Q603 188 603 354Q603 411 598 439Q577 592 467 647Z"></path><path stroke-width="0" id="E670-MJMATHI-58" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path><path stroke-width="0" id="E670-MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E670-MJMAIN-43" x="0" y="0"></use><use xlink:href="#E670-MJMAIN-4F" x="722" y="0"></use><g transform="translate(1500,0)"><g></g><g transform="translate(0,-150)"><g><use transform="scale(0.707)" xlink:href="#E670-MJMAIN-32" x="0" y="0"></use></g></g></g></g></svg></span><script type="math/tex">\ce{CO2}</script><span>, </span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="4.602ex" height="2.344ex" viewBox="0 -806.1 1981.6 1009.2" role="img" focusable="false" style="vertical-align: -0.472ex;"><defs><path stroke-width="0" id="E671-MJMAIN-48" d="M128 622Q121 629 117 631T101 634T58 637H25V683H36Q57 680 180 680Q315 680 324 683H335V637H302Q262 636 251 634T233 622L232 500V378H517V622Q510 629 506 631T490 634T447 637H414V683H425Q446 680 569 680Q704 680 713 683H724V637H691Q651 636 640 634T622 622V61Q628 51 639 49T691 46H724V0H713Q692 3 569 3Q434 3 425 0H414V46H447Q489 47 498 49T517 61V332H232V197L233 61Q239 51 250 49T302 46H335V0H324Q303 3 180 3Q45 3 36 0H25V46H58Q100 47 109 49T128 61V622Z"></path><path stroke-width="0" id="E671-MJMATHI-58" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path><path stroke-width="0" id="E671-MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path><path stroke-width="0" id="E671-MJMAIN-4F" d="M56 340Q56 423 86 494T164 610T270 680T388 705Q521 705 621 601T722 341Q722 260 693 191T617 75T510 4T388 -22T267 3T160 74T85 189T56 340ZM467 647Q426 665 388 665Q360 665 331 654T269 620T213 549T179 439Q174 411 174 354Q174 144 277 61Q327 20 385 20H389H391Q474 20 537 99Q603 188 603 354Q603 411 598 439Q577 592 467 647Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E671-MJMAIN-48" x="0" y="0"></use><g transform="translate(750,0)"><g></g><g transform="translate(0,-150)"><g><use transform="scale(0.707)" xlink:href="#E671-MJMAIN-32" x="0" y="0"></use></g></g></g><use xlink:href="#E671-MJMAIN-4F" x="1203" y="0"></use></g></svg></span><script type="math/tex">\ce{H2O}</script><span> und </span><span class="MathJax_SVG" tabindex="-1" style="font-size: 100%; display: inline-block;"><svg xmlns:xlink="http://www.w3.org/1999/xlink" width="3.786ex" height="2.344ex" viewBox="0 -806.1 1630 1009.2" role="img" focusable="false" style="vertical-align: -0.472ex; margin-right: -0.925ex;"><defs><path stroke-width="0" id="E672-MJMAIN-4F" d="M56 340Q56 423 86 494T164 610T270 680T388 705Q521 705 621 601T722 341Q722 260 693 191T617 75T510 4T388 -22T267 3T160 74T85 189T56 340ZM467 647Q426 665 388 665Q360 665 331 654T269 620T213 549T179 439Q174 411 174 354Q174 144 277 61Q327 20 385 20H389H391Q474 20 537 99Q603 188 603 354Q603 411 598 439Q577 592 467 647Z"></path><path stroke-width="0" id="E672-MJMATHI-58" d="M42 0H40Q26 0 26 11Q26 15 29 27Q33 41 36 43T55 46Q141 49 190 98Q200 108 306 224T411 342Q302 620 297 625Q288 636 234 637H206Q200 643 200 645T202 664Q206 677 212 683H226Q260 681 347 681Q380 681 408 681T453 682T473 682Q490 682 490 671Q490 670 488 658Q484 643 481 640T465 637Q434 634 411 620L488 426L541 485Q646 598 646 610Q646 628 622 635Q617 635 609 637Q594 637 594 648Q594 650 596 664Q600 677 606 683H618Q619 683 643 683T697 681T738 680Q828 680 837 683H845Q852 676 852 672Q850 647 840 637H824Q790 636 763 628T722 611T698 593L687 584Q687 585 592 480L505 384Q505 383 536 304T601 142T638 56Q648 47 699 46Q734 46 734 37Q734 35 732 23Q728 7 725 4T711 1Q708 1 678 1T589 2Q528 2 496 2T461 1Q444 1 444 10Q444 11 446 25Q448 35 450 39T455 44T464 46T480 47T506 54Q523 62 523 64Q522 64 476 181L429 299Q241 95 236 84Q232 76 232 72Q232 53 261 47Q262 47 267 47T273 46Q276 46 277 46T280 45T283 42T284 35Q284 26 282 19Q279 6 276 4T261 1Q258 1 243 1T201 2T142 2Q64 2 42 0Z"></path><path stroke-width="0" id="E672-MJMAIN-32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><use xlink:href="#E672-MJMAIN-4F" x="0" y="0"></use><g transform="translate(778,0)"><g></g><g transform="translate(0,-150)"><g><use transform="scale(0.707)" xlink:href="#E672-MJMAIN-32" x="0" y="0"></use></g></g></g></g></svg></span><script type="math/tex">\ce{O2}</script><span>, aber auch Temperatur, Klima und das Wetter.</span></p><p>&nbsp;</p><h2><a name="nahrungsnetz" class="md-header-anchor"></a><span>Nahrungsnetz</span></h2><p><span>Je weiter oben im Netz eine Gruppe plötzlich fehlt, desto dramatischer sind die Auswirkungen.</span></p><table>
+	<tbody><tr>
+        <td width="50%">
+        	<img src="http://www.wotys.de/aufbau4.jpg" alt="Nahrungsnetz eines Baumes" style="zoom:50%;">
+        </td>
+    	<td width="50%">
+        	<img src="https://image3.slideserve.com/5473056/2-maritime-nahrungsnetze20-n.jpg" alt="Nahrungsnetz des Meers">
+        </td>
+    </tr>
+</tbody></table><p>&nbsp;</p><p>&nbsp;</p><h2><a name="grundbegriffe" class="md-header-anchor"></a><span>Grundbegriffe</span></h2><ul><li><p><strong><span>BIOMASSE</span></strong></p><p><span>die Masse aller Organismen innerhalb eines Ökosystems</span></p></li><li><p><strong><span>Bruttoprimärproduktion</span></strong></p><p><span>Fotosyntheseleistung aller Pflanzen eines Ökosystems</span></p></li><li><p><strong><span>Nettoprimärproduktion</span></strong></p><p><span>Pflanze selbst verbraucht für ihre Lebensvorgänge Energie. Das Verbliebene dient dem Aufbau neuer Biomasse und dient den Konsumenten als Nahrungsquelle</span></p></li></ul><p>&nbsp;</p><blockquote><p><span>Beispiel der Grundbegriffe</span></p></blockquote><div>
+    <img src="D:\Dokumente\.Scripts\Python\school_website\school_website\templates\biologie\images\oekologie-grundbegriffe.png" alt="Beispiel der Grundbegriffe" style="zoom:47%;">
+</div><p>&nbsp;</p><h2><a name="nahrungspyramide" class="md-header-anchor"></a><span>Nahrungspyramide</span></h2><div>
+    <img src="https://eqiooki.de/ecology/design/ecopyramid_max.png" alt="Nahrungspyramide Wald" style="zoom: 33%;">
+</div><p><span>Je weiter oben in der Nahrungspyramide ein Lebewesen ist, desto mehr Energie und Biomasse benötigt es um zu überleben.</span></p><p>&nbsp;</p><blockquote><p><span>Beispiel</span></p></blockquote><p><span>Der Fuchs benötigt mehrere Igel um zu überleben, jeder von diesen braucht wiederum eine Vielzahl an Insekten, diese alle brauchen eine Vielzahl an pflanzlicher Nahrung.</span><br><strong><span>→ Die benötigte Biomasse und Energie pro Individuum steigt, je weiter oben es ist.</span></strong></p><p>&nbsp;</p><h1><a name="biotop" class="md-header-anchor"></a><span>Biotop</span></h1><p><em><span>Abgrenzbarer Lebensbereich, welcher durch spezielle abiotische Umweltfaktoren gekennzeichnet wird.</span></em></p><p><span>Alles, was in einem Biotop lebt nennt man </span><b><span>Biozönose</span></b><span> (→ Lebensgemeinschaft)</span></p><p><span>Es gibt künstliche und natürliche Ökosysteme.</span><br></p><table>
+    <tbody><tr>
+    	<th width="50%">
+        	Künstliche Ökosysteme:
+        </th>
+        <th width="50%">
+        	Natürliche Ökosysteme:
+        </th>
+    </tr>
+    <tr>
+    	<td width="50%">
+        	<ul>
+                <li>Fichtenforst
+           		</li><li>Kuh-Weide</li>
+            	<li>Garten</li>
+            	<li>Acker</li>
+            	<li>Teich</li>
+            </ul>
+    		<div>
+                → Wenn der Mensch in das Ökosystem eingreift, ist es <b>künstlich</b>.
+    		</div>
+        </td>
+		<td width="50%">
+			<ul>
+                <li>verwilderte, natürliche Wälder</li>
+                <li>Moore</li>
+                <li>unberührter Regenwald</li>
+                <li>See</li>
+                <li>Meer</li>
+            </ul>
+            <div>
+                → Wenn der Mensch nicht in das Ökosystem nicht eingreift, ist es <b>natürlich</b>.
+            </div>
+		</td>
+    </tr>
+</tbody></table><p>&nbsp;</p><h1><a name="ökologische-nische" class="md-header-anchor"></a><span>Ökologische Nische</span></h1><blockquote><p><span>Welche Rückschlüsse geben die Schnabel von Vögel auf deren Lebensweise? </span><em><span>Bs. 121</span></em></p></blockquote><p><strong><span>Stockente:</span></strong></p><ul>
+    <li><u>festhalten durch die Haken auf der Unterseite</u></li>
+    <li>lässt Wasser durch Schnabel fließen und filtert das Essen, Seischnabel (Planktonfresser)</li>
+</ul><p>&nbsp;</p><p><strong><span>Bekassine:</span></strong></p><ul>
+    <li><u>spitzer Schnabel fürs Nektar holen aus dünnen, langen Blumen</u></li>
+    <li>stocher Schnabel, stochert im Schlamm herum</li>
+</ul><p>&nbsp;</p><p><strong><span>Wintergold-Hähnchen:</span></strong></p><ul>
+    <li><u>kurzer, kleiner Schnabel</u></li>
+    <li>frisst Larven, Schnabel eines Insectivora</li>
+</ul><p>&nbsp;</p><p><strong><span>Buntspecht:</span></strong></p><ul>
+    <li><u>harter, dicker Schnabel um Objekte aufzubrechen</u></li>
+    <li>lange Zunge um Insekten herauszubekommen</li>
+</ul><p>&nbsp;</p><p><strong><span>Eisvogel:</span></strong></p><ul>
+    <li><u>nicht gesehen</u></li>
+    <li>isst Fische</li>
+    <li>Harpunen artiger Schnabel als typischer Fischfresser</li>
+</ul><p>&nbsp;</p><p><strong><span>Kieferkreuzschnabel:</span></strong></p><ul>
+    <li><u>harter, spitz gehackter Schnabel für die Jagd</u></li>
+    <li>Schnabel ist überkreuzt</li>
+    <li>dient dazu um Samen von Zapfen aufzusammeln</li>
+</ul><p>&nbsp;</p><p><strong><span>Gimpel:</span></strong></p><ul>
+    <li><u>nicht gesehen</u></li>
+</ul><p>&nbsp;</p><h2><a name="was-ist-eine-ökologische-nische" class="md-header-anchor"></a><span>Was ist eine ökologische Nische?</span></h2><p><span>Eine Ökologische Nische ist ein bestimmter Aufgabenbereich, bzw. eine Spezialisierung auf einen Lebensraum und Verhalten.</span></p><p><span>Durch die Spezialisierung fällt die Konkurrenz weg und man hat eine größere Überlebenschance.</span><br><span>Gibt es mehrere Arten, welche die gleiche Ausrichtungen und gleichen Lebensraum haben, wird sich anders aus dem Weg gegangen </span><em><span>(Bsp. Schleiereule und Mäusebussard)</span></em></p><p>&nbsp;</p><blockquote><p><span>Gedankenexperiment: Was empfiehlst du einer Pflanze im Hochgebirge?</span></p></blockquote><ul><li><span>helle/ grelle Farbe um Insekten anzulocken</span></li><li><span>Gruppierungen gegen den Windschutz</span></li><li><span>gute Wurzeln</span></li></ul><p>&nbsp;</p><h1><a name="sukzession" class="md-header-anchor"></a><span>Sukzession</span></h1><p><em><span>Altes Buch S. 126; 1, 2</span></em></p><p><u><span>Anm. zum Buch:</span></u></p><p><span>Klimax → Patch dynnamics, da es keinen Endzustand in einem Biotop geben kann. </span><em><span>(Minisukzession)</span></em></p><p>&nbsp;</p><h2><a name="biotopschutz" class="md-header-anchor"></a><span>Biotopschutz</span></h2><p><span>Man gestaltet einen bestimmten Bereich so um, dass sich ein Lebewesen dort sehr wohl fühlt.</span></p><p>&nbsp;</p><h2><a name="renaturierung" class="md-header-anchor"></a><span>Renaturierung</span></h2><p><span>Einen Landstrich wieder zu den natürlichen Umständen zurückgeführt. </span><em><span>(Bsp. Flussläufe)</span></em></p><p>&nbsp;</p><h2><a name="powerpoint-im-moodle" class="md-header-anchor"></a><span>PowerPoint im Moodle</span></h2><blockquote><p><span>Mischwald vs. Fichtenwald Diskussion</span></p></blockquote><p><strong><span>Mischwald</span></strong><span> </span><em><span>(Winner)</span></em><br><span>+</span><span> Biodiversität → sehr, sehr wichtig!</span>
+<span>+</span><span> mehr ökologische Nischen</span>
+<span>+</span><span> bindet mehr CO2 → mildert den Klimawandel</span>
+<span>+</span><span> Wetterfester → weniger Bäume fallen um</span>
+<span>+</span><span> heimische Bäume sterben nicht aus</span>
+<span>+</span><span> Größere Produktivität; Holzertrag ist besser als im Fichtenwald (neue Erkenntnis)</span>
+<span>+</span><span> mehr Licht im Winter </span>
+<span>+</span><span> stabiler in Trockenjahren (verschiedene Pflanzen →  verschiedene ökologische Potenzen)</span>
+<span>+</span><span> mehr Stabilität wegen besser Nahrungsnetze</span></p><p>&nbsp;</p><p><strong><span>Fichtenwald</span></strong><br><span>+</span><span> wachsen schneller</span>
+<span>+</span><span> CO2 wird im Bauholz lange gespeichert</span>
+<span>+</span><span> günstigeres Holz (viel Angebot!)</span>
+<span>+</span><span> leichter bewirtschaftbar</span>
+<span>-</span><span> aggressive  Schädlinge</span>
+<span>-</span><span> Fichten sind nicht auf Klimawandel vorbereitet</span></p><p>&nbsp;</p><p><em><span>Metastudie = Studie über andere Studien, umfangreicher</span></em></p><p>&nbsp;</p><h1><a name="stickstoffkreislauf" class="md-header-anchor"></a><span>Stickstoffkreislauf</span></h1><div>
+    <img src="https://lh5.googleusercontent.com/Uu7JAgsETTZPFHp-smTGvZ69niX9dZZoP8bbFhmP4wALvvaGkrjebPHBGvpUkDccUN_U_Q1OMfwo4M5k6NVlUdHv-vA9httYz1U94lTrLkV_mfWztOyuMT85lCVUtACStgqqA7Gk" alt="img" style="zoom:70%;">
+</div><h3><a name="stickstoffkreislauf----simpleclubhttpswwwyoutubecomwatchlistpliig2vndmtpctcqjkndeq74pusp47shiovnrkrdg4k-be" class="md-header-anchor"></a><a href='https://www.youtube.com/watch?list=PLIIg2VNdMtPctCqJKNDeQ74PUsP47shiO&amp;v=nrKRDg4k-bE'><span>Stickstoffkreislauf – SimpleClub</span></a></h3><p><a href='https://www.youtube.com/watch?v=UwIhCxFjdSQ'><span>Stickstoffkreislauf – M. Blumberg</span></a></p><div>
+    <img src="D:\Dokumente\.Scripts\Python\school_website\school_website\templates\biologie\images\stickstoffkreislauf.png" alt="image-20201014232741030" style="zoom: 40%;">
+</div><p>&nbsp;</p><h1><a name="klimaregeln" class="md-header-anchor"></a><span>Klimaregeln</span></h1><ol start='' ><li><strong><span>Bergmannsche Klimaregel</span></strong>
+<span>Je größer desto mehr lebst im Norden, da ein größerer Körper mehr Energie produziert.</span>
+<span>Je kälter das Wetter, desto größer das Tier, da mehr Volumen auch mehr Energieproduktion bedeutet (Muskeln).</span>
+<span>→ </span><a href='#beispiele'><span>Siehe Beispiel Pinguin</span></a><span> </span></li></ol><p><span>  </span></p><ol start='2' ><li><strong><span>Allensche Klimaregel </span></strong><span> </span>
+<span>Alles was dazu dient, Wärme aufzunehmen/ abzugeben wird gefördert (Bsp.: Polarfuchs: kleine Ohren, Wüstenfuchs: große Ohren)</span>
+<span>Bei kaltem Wetter, kompakter Körperbau, bei Hitze große Körperanhänge (lange Beine, große Ohren etc.)</span>
+<span>→ </span><a href='#beispiele'><span>Siehe Beispiel Hase</span></a></li></ol><p><span>  </span></p><ol start='3' ><li><strong><span>Glogersche Klimaregel</span></strong><span> </span>
+<span>Jene mit stärkerer Pigmentierung leben in wärmeren Gebieten (Sonnenschutz).</span></li></ol><p><span>  </span></p><ol start='' ><li><strong><span>Hessesche Klimaregel</span></strong>
+<em><span>Herzgewichtregel</span></em>
+<span>Tiere in kälteren Gebieten haben ein größeres und schwereres Herz, wegen gesteigerter Stoffwechselleistung zur Aufrechterhaltung der Körpertemperatur.</span></li></ol><p>&nbsp;</p><h2><a name="beispiele" class="md-header-anchor"></a><span>Beispiele</span></h2><figure><table><thead><tr><th><span>Hase</span></th><th><span>Pinguin</span></th></tr></thead><tbody><tr><td><span>A - 1</span></td><td><span>A - 5</span></td></tr><tr><td><span>B - 2</span></td><td><span>B - 3</span></td></tr><tr><td><span>C - 4</span></td><td><span>C - 4</span></td></tr><tr><td><span>D - 3</span></td><td><span>D - 1</span></td></tr><tr><td>&nbsp;</td><td><span>E - 2</span></td></tr></tbody></table></figure><p>&nbsp;</p><div style="float:right; position: relative; right: 50%;">
+    Ab hier nicht mehr zum Test
+</div><hr /><h1><a name="räuber-beute-beziehung" class="md-header-anchor"></a><span>Räuber-Beute-Beziehung</span></h1><ul><li><p><span>Österreichischer Mathematiker </span><strong><span>Alfred J. Lotka</span></strong></p></li><li><p><span>Italienischer Mathematiker und Physiker </span><strong><span>Vito Volterra</span></strong></p></li><li><p><span>1925 &amp; 1926 unabhängig voneinander → </span><strong><span>Lotka-Volterra-Gleichungen</span></strong>
+<img src="https://www.mefa.jena.de/images/bioweb/Volterra-website/Volterra-Regeln-Dateien/image004.gif" referrerpolicy="no-referrer" alt="Mathematische Kurve der Gleichungen"></p><p>&nbsp;</p></li><li><p><span>Mathematische Differentialgleichungen, in denen erstmal der quantitative Aspekt der Populationsentwicklung in Abhängigkeit von der Zeit dargestellt wurde.</span></p></li></ul><p>&nbsp;</p><h2><a name="was-kann-man-aus-dieser-kurve-herauslesen" class="md-header-anchor"></a><span>Was kann man aus dieser Kurve herauslesen?</span></h2><p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/LotkaVolterra.svg/1200px-LotkaVolterra.svg.png" alt="Kurve Population/ Zeit" style="zoom:65%;" /></p><ul><li><span>Abgebildet ist die Anzahl der Individuen gegenüber der Zeit. </span><strong><span>Population der Beutetiere ist größer als die der Räuber.</span></strong></li><li><span>Maximum und Minimum schwanken beide um einen Mittelwert → </span><strong><span>2 Balken durch die jeweilige Mitte durch.</span></strong></li></ul><p>&nbsp;</p><h2><a name="zusammenfassung" class="md-header-anchor"></a><span>Zusammenfassung</span></h2><ol start='' ><li><span>Regel: Die Individuenzahl schwankt um einen Mittelwert.</span></li><li><span>Regel: Die Populationsgrößen (ihr Steigen und Fallen) ist phasenverschoben.</span></li><li><span>Regel: Beutetiere erholen sich wesentlich schneller als die Räuber (steilerer bzw. flacherer Anstieg der Kurve)</span></li></ol></div>
+</body>
+</html>
