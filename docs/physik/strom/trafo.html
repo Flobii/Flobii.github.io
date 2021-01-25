@@ -1083,11 +1083,57 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>Strom</title></head><body><article class="markdown-body"><p><a href="https://flobii.github.io/physik/"><i style="border: solid black;border-width: 0 3px 3px 0;display: inline-block;padding: 3px;transform: rotate(+135deg);-webkit-transform: rotate(+135deg);"></i> Physik Übersicht</a></p>
-<p><center><h1>Strom</h1></center></p>
-<h1 id="themen">Themen<a class="headerlink" href="#themen" title="Permanent link"></a></h1>
-<ul>
-<li><a href="https://flobii.github.io/physik/strom/stromzusammenfassung.html">Kleine Stromzusammenfassung</a></li>
-<li><a href="https://flobii.github.io/physik/strom/magnetismus.html">Magnetismus</a></li>
-<li><a href="https://flobii.github.io/physik/strom/trafo.html">Transformator</a></li>
-</ul></article></body></html>
+</style><title>Transformator</title></head><body><article class="markdown-body"><p><a href="https://flobii.github.io/physik/strom/"><i style="border: solid black;border-width: 0 3px 3px 0;display: inline-block;padding: 3px;transform: rotate(+135deg);-webkit-transform: rotate(+135deg);"></i> Zurück zur Übersicht</a></p>
+<p><center><h1>Transformator</h1></center></p>
+<div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#aufbau-funktion">Aufbau &amp; Funktion</a></li>
+<li><a href="#zusammenhang">Zusammenhang</a></li>
+<li><a href="#hochspannungsleitungen">Hochspannungsleitungen</a></li>
+<li><a href="#beispiele">Beispiele</a><ul>
+<li><a href="#skriptum-s-12">Skriptum S. 12</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="aufbau-funktion">Aufbau &amp; Funktion<a class="headerlink" href="#aufbau-funktion" title="Permanent link"></a></h1>
+<p>Der Trafo besteht aus 2 Spulen und einem U-Kern mit Joch aus Weicheisen.</p>
+<p><img alt="Aufbau Trafo" src="https://blog.studyflix.de/wp-content/uploads/2020/03/Transformator-Aufbau-1024x576.png" /></p>
+<p>Shickt man in die 1. Spule Wechselstrom, wechselt die Richtung des Magnetsfeld im U-Kern ständig und erzeugt dadurch eine <a class="wikilink" href="https://de.wikipedia.org/wiki/Induktionsspannung">Induktionsspannung</a> in der 2. Spule.</p>
+<h1 id="zusammenhang">Zusammenhang<a class="headerlink" href="#zusammenhang" title="Permanent link"></a></h1>
+<p>Die Spannung und die Windungszahlen <script type="math/tex">n</script> der Spulen sind direkt proportional:</p>
+<p>
+<script type="math/tex">
+\frac{U_1}{U_2}=\frac{n_1}{n_2}
+</script>
+</p>
+<p>Da die Leistung aber auf beiden Seiten gleich ist, ist die Stromstärke indirekt proportional:<br />
+<script type="math/tex">
+\overline{P_1}=\overline{P_2}\\
+U_1\cdot I_1=U_2\cdot I_2\\~\\
+\frac{U_1}{U_2}=\frac{I_2}{I_2}\qquad\qquad\frac{I_1}{I_2}=\frac{n_2}{n_1}~
+</script>
+</p>
+<h1 id="hochspannungsleitungen">Hochspannungsleitungen<a class="headerlink" href="#hochspannungsleitungen" title="Permanent link"></a></h1>
+<p>Warum? Durch die hohe Spannung gibt es weniger Verlust in den Fernleitungen. Denn: Gibt es in der Fernleitung einen Widerstand <script type="math/tex">R</script> dann gilt für die Verlustleistung: <script type="math/tex">P_L=I^2\cdot R</script> und für die übertragene Gesamtleistung: <script type="math/tex">P=U\cdot I</script>.</p>
+<p>Die relative Verlustleistung:<br />
+<script type="math/tex">
+\frac{P_L}{P}=\frac{I^2\cdot R}{U\cdot I}=\frac{P\cdot R}{U^2}
+</script>
+</p>
+<h1 id="beispiele">Beispiele<a class="headerlink" href="#beispiele" title="Permanent link"></a></h1>
+<h2 id="skriptum-s-12">Skriptum S. 12<a class="headerlink" href="#skriptum-s-12" title="Permanent link"></a></h2>
+<p>
+<script type="math/tex">
+1)\\
+U_2=12V;~~I_2=10A\\
+a)~P_m=12\cdot10=120W\\
+b)~U_1=230V;~~I_1=0.5217A\\
+c)~U_1:U_2=19.1\overline{6}:1\\
+~\\
+2)\\
+P=30W\\
+I_2=2A;~~U_1=230V\\
+a)~I_1=\frac{30}{230}=0.13A;~~U_2=\frac{30}{2}=15V\\
+b)~U_1:U_2=15.\overline{3}:1
+</script>
+</p></article></body></html>
