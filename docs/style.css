@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --main-bg-color: rgb(229, 229, 229);
+        --main-txt-color: rgb(33, 33, 33);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color: rgb(41, 41, 41);
+        --main-txt-color: rgb(224, 224, 224);
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    max-width: 40%;
+    margin: 5rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--main-bg-color);
+    color: var(--main-txt-color);
+}
+
+body > * {
+    pointer-events: none;
+    user-select: none;
+}
+
+.header {
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 2rem;
+}
+
+.lorem {
+    background-image: linear-gradient(180deg, var(--main-txt-color) 0%, rgba(114,114,114,1) 54%, var(--main-bg-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 975px) {
+    body {
+        max-width: 50%;
+        margin: 2rem auto;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        max-width: 70%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    body {
+        max-width: 90%;
+    }
+}
