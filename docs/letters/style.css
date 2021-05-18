@@ -14,9 +14,12 @@ body {
   font-family: 'Open Sans', sans-serif;
   background: var(--main-bg-color);
   color: var(--main-txt-color);
-  width: 100vw;
+  width: 99vw;
+  min-width: 400px;
   height: 90vh;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   overflow-x: hidden;
 }
 
@@ -44,7 +47,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  min-width: 500px;
+  min-width: 400px;
   width: 100%;
   overflow: hidden;
 }
