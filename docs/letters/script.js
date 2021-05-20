@@ -28,12 +28,13 @@ function getLetters() {
     alert('Please let the dictionairy load first!');
     return;
   }
+  PAST = new Set()  // reset PAST
   let _letters = letterInput
     .value()
     .replace(/\s+/g, '')
     .replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '');
   letterInput.value('');
-  let letterArray = _letters.split('').map((s) => s.toLowerCase());
+  let letterArray = Array.from(_letters).map((s) => s.toLowerCase());
   let sortedWords = {};
   for (let letters of reduce(letterArray)) {
     for (let letter of sortedPossibilities(letters)) {
@@ -44,8 +45,11 @@ function getLetters() {
       }
     }
   }
+  console.log(letterArray);
   console.log(sortedWords);
   createWordList(sortedWords);
+  delete sortedWords;
+  delete letterArray;
 }
 
 function createWordList(sortedWords) {
