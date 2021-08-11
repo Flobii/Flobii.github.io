@@ -1,0 +1,109 @@
+/*
+Color Palette: https://colorswall.com/palette/52989/
+*/
+
+:root {
+  --box-shadow-color: hsl(0, 0%, 77%);
+  --link-color: hsl(228, 7%, 32%);
+  --main-accent-color: hsl(355, 69%, 55%);
+  --main-bg-color: hsl(0, 0%, 93%);
+  --main-txt-color: hsl(228, 7%, 14%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --box-shadow-color: hsl(228, 7%, 32%);
+    --link-color: hsl(0, 0%, 82%);
+    --main-accent-color: hsl(355, 95%, 62%);
+    --main-bg-color: hsl(228, 7%, 14%);
+    --main-txt-color: hsl(0, 0%, 93%);
+  }
+}
+
+body > * {
+  color: var(--main-txt-color);
+  font-family: Mukta, sans-serif;
+}
+
+body {
+  align-items: center;
+  background-color: var(--main-bg-color);
+  display: grid;
+  font-family: Mukta, sans-serif;
+  margin: auto;
+  max-width: 90%;
+}
+
+h1 {
+  color: var(--main-accent-color);
+  font-family: Roboto, sans-serif;
+  font-size: 30pt;
+  max-width: 1040px;
+  text-align: center;
+}
+
+#title {
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2F_YF2Iw_9Z4c%2Fmaxresdefault_live.jpg&f=1&nofb=1');
+  background-position: top;
+  border-radius: 20px;
+  box-shadow: 7px 10px var(--main-accent-color);
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 140px;
+  padding-top: 1em;
+  text-shadow: 2px 2px var(--main-bg-color);
+}
+
+h2 {
+  border-bottom: 3px solid var(--box-shadow-color);
+  color: var(--main-accent-color);
+  font-family: Roboto, sans-serif;
+  font-size: 24pt;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1040px;
+  padding-top: 3rem;
+  text-align: center;
+}
+
+h2:first-of-type {
+  padding-top: initial;
+}
+
+fieldset {
+  border-color: var(--main-accent-color);
+  border-radius: 20px;
+  border-style: solid;
+  box-shadow: 7px 10px var(--box-shadow-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  max-width: 1000px;
+  padding-left: 20px;
+}
+
+legend {
+  background-color: var(--main-accent-color);
+  border-radius: 50px;
+  box-shadow: 3px 5px var(--box-shadow-color);
+  color: var(--main-bg-color);
+  font-size: 14pt;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+img {
+  border-radius: 20px;
+}
+
+footer {
+  color: var(--box-shadow-color);
+  font-style: italic;
+  margin: auto;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+
+footer > a {
+  color: var(--link-color);
+}
