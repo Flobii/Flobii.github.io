@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./src/favicon.svg" type="image/svg">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined">
+  <link rel="stylesheet" href="./style.css" defer>
+  <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+  <title>Pixel Screenshot</title>
+</head>
+
+<body>
+  <main>
+    <div class="left-container">
+      <h1 id="title">
+        <span class="material-icons-outlined" id="title-icon">screenshot</span>
+        Pixel Screenshot
+      </h1>
+      <div class="drop-area">
+        <form class="drop-form">
+          <input type="file" id="file-elem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          <label class="button" for="file-elem">
+            <span class="material-icons-outlined" id="add-photo">add_a_photo</span>
+            Select an image...
+          </label>
+        </form>
+      </div>
+    </div>
+    <div class="right-container">
+      <canvas id="canvas"></canvas>
+      <button class="download-button">
+        <span class="material-icons-outlined" id="download">file_download</span>
+      </button>
+    </div>
+  </main>
+
+  <img src="./src/masc.png" id="masc" hidden>
+  <img src="./src/example.png" id="example" hidden>
+  <img src="./src/frame.png" id="frame" hidden>
+  <img id="screenshot" hidden>
+
+  <script src="./index.js" defer></script>
+  <script src="./dropbox.js" defer></script>
+
+</body>
+
+</html>
