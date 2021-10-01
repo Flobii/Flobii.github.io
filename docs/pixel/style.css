@@ -7,7 +7,7 @@
   --background-light: hsl(0, 0%, 100%);
   --background: hsl(0, 0%, 100%);
   --border-radius: 10px;
-  --text-flipped: hsl(213, 7%, 76%);
+  --text-flipped: hsl(0, 0%, 100%);
   --text: hsl(225, 6%, 13%);
   --box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
 }
@@ -82,7 +82,6 @@ div.right-container {
 
 .button {
   color: var(--text-flipped);
-  /* display: inline-block; */
   padding: 12px;
   background-color: var(--accent);
   cursor: pointer;
@@ -92,8 +91,18 @@ div.right-container {
   /* vertical-align: middle; */
 }
 
-#file-upload-button {
-  color: red;
+.download-button {
+  margin-top: 1rem;
+  color: var(--text-flipped);
+  display: grid;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--accent);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  outline: none;
+  border: none;
 }
 
 .button:hover,
@@ -131,22 +140,6 @@ div.right-container {
 #download {
   font-size: 1.5rem;
   /* margin: auto; */
-}
-
-.download-button {
-  margin-top: 1rem;
-  color: var(--text-flipped);
-  display: grid;
-  align-items: center;
-  padding: 10px;
-  background-color: var(--accent);
-  cursor: pointer;
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  /* margin: auto; */
-  /* height: 3em; */
-  outline: none;
-  border: none;
 }
 
 @media only screen and (max-width: 950px) {
