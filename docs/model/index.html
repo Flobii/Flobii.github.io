@@ -19,15 +19,10 @@
 
 
   <!-- Use it like any other HTML element -->
-  <model-viewer src="./zauberwürfel.glb"
-    alt="A cube with numbers"
-    ar ar-modes="webxr scene-viewer quick-look"
-    camera-controls style="width: 100%; height: 100%"
-    field-of-view="0deg"
-    camer-orbit="10deg 75deg 50m"
-    max-camera-orbit="Infinity 180deg Infinity"
-    scale="1 1 1"
-    environment-image="./lighting.hdr">
+  <model-viewer src="./zauberwürfel.glb" alt="A cube with numbers" ar ar-modes="webxr scene-viewer quick-look"
+    camera-controls style="width: 100%; height: 100%" field-of-view="1deg" camera-orbit="10deg 75deg 50m"
+    max-camera-orbit="Infinity 180deg Infinity" scale="1 1 1" environment-image="./lighting.hdr"
+    ar-status="not-presenting">
   </model-viewer>
 
   <!-- new model that is the old model -->
@@ -41,6 +36,7 @@
 
     scale="1 1 1"
     exposure="2"> -->
-</model-viewer>
+  </model-viewer>
 </body>
+
 </html>
